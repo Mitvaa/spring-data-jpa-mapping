@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error">
+    <Properties>
+        <Property name="log-path">/mitva/logs</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %level %t %c#%M - %msg%n" />
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <logger name="com.codemach" level="debug" />
+        <Root level="error">
+            <AppenderRef ref="tasks"/>
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
